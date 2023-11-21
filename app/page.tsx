@@ -11,7 +11,7 @@ export default function Chat() {
         <div className="absolute w-[360px] left-[50px] top-[100px]">
           {messages.length > 0
             ? messages.map(m => (
-              <div key={m.id} className={`whitespace-pre-wrap max-w-[200px] ${m.role === 'user' ? 'text-left' : 'text-right'}`}>
+              <div key={m.id} className={`whitespace-pre-wrap max-w-[200px] ${m.role === 'user' ? 'ms-0 me-auto' : 'ms-auto me-0'}`}>
                 {m.content}
               </div>
             ))
