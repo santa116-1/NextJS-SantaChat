@@ -51,8 +51,6 @@ const functions: ChatCompletionCreateParams.Function[] = [
 export async function POST(req: Request) {
   const { messages } = await req.json();
 
-  console.log("-----------------------------------------------------------3", messages);
-
   const response = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo-0613',
     stream: true,

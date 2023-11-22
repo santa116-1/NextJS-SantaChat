@@ -1,6 +1,7 @@
 'use client';
 
 import { useChat } from 'ai/react';
+import Image from 'next/image';
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, data } = useChat();
@@ -31,6 +32,7 @@ export default function Chat() {
               placeholder="What will I get for Chrismas?"
               onChange={handleInputChange}
             />
+            <Image src="/images/right-arrow.png" className='absolute bottom-[30px] right-[50px] cursor-pointer z-[4]' width={30} height={30} quality={100} alt="submit" onClick={(e) => handleSubmit(e as any)} />
           </form>
         </div>
       </div>
