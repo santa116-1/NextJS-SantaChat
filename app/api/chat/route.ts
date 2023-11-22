@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   // Extract the `prompt` from the body of the request
   let { messages } = await req.json();
 
-  console.log("------------------------------------------------------------");
+  console.log("------------------------------------------------------------2", messages);
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({

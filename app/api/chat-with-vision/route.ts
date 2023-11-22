@@ -17,6 +17,8 @@ export async function POST(req: Request) {
   const initialMessages = messages.slice(0, -1);
   const currentMessage = messages[messages.length - 1];
 
+  console.log("-----------------------------------------4", messages);
+
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
     model: 'gpt-4-vision-preview',
