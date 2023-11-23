@@ -14,11 +14,13 @@ export async function POST(req: Request) {
   // Extract the `prompt` from the body of the request
   const { messages } = await req.json();
 
+  const contents = "translate in Japanese";
+  
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
     stream: true,
-    messages: messages,
+    messages: [{ role: 'system', content: contents }, ...messages],
   });
 
   // Convert the response into a friendly text-stream
