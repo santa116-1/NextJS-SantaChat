@@ -27,7 +27,7 @@ export default function Chat() {
         <div className="w-full">
           <form className="w-full" onSubmit={handleSubmit}>
             <input
-              className="absolute bottom-[20px] z-[3] w-[calc(100%_-_80px)] rounded-[25px] p-3"
+              className="absolute bottom-[20px] z-[3] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#eee] focus:bg-[#fff]"
               value={input}
               placeholder="What will I get for Chrismas?"
               onChange={handleInputChange}
