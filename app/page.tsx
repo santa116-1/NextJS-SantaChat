@@ -1,15 +1,26 @@
 'use client';
 
+import React, { useState, useEffect, useRef } from "react";
 import { useChat } from 'ai/react';
 import Image from 'next/image';
 
 export default function Chat() {
+
+  const chatHistoryRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (chatHistoryRef.current) {
+      const element = chatHistoryRef.current;
+      element.scrollTop = element.scrollHeight;
+    }
+  });
+
   const { messages, input, handleInputChange, handleSubmit, data } = useChat();
   return (
     <div className="w-full h-[100vh] bg-cover bg-top flex justify-center items-center" style={{ backgroundImage: "url(images/bg.jpg)" }}>
       <div className="w-[1200px] h-[800px] bg-gradient-to-bl from-[#edb4a6] to-[#cee6fe] rounded-[50px] opacity-[95%] relative p-[40px]">
         <img src="/images/character.png" alt="" width={400} className="absolute left-[50%] translate-x-[-50%] bottom-0 z-[2]" />
-        <div className="absolute w-[360px] h-[600px] overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] px-[5px]">
+        <div className="absolute w-[360px] h-[600px] overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] px-[5px]" ref={chatHistoryRef}>
           <div className="whitespace-pre-wrap max-w-[280px] p-3 rounded-t-[20px] ms-auto me-0 bg-[#979ea7] rounded-l-[20px] text-white">
             Well Hello Ho Ho Ho there,<br />
             how are you?<br />
