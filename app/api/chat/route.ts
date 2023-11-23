@@ -11,17 +11,10 @@ const openai = new OpenAI({
 export const runtime = 'edge';
 
 export async function POST(req: Request) {
-  // Extract the `userMessages` from the body of the request
-  const { userMessages } = await req.json();
+  // Extract the `prompt` from the body of the request
+  const { messages } = await req.json();
 
-  const messages = [
-    { role: 'system', content: '日本語で返信する' },
-    ...userMessages.map((message: string) => ({ role: 'user', content: message })),
-  ];
-
-  console.log(userMessages);
-
-  // Ask OpenAI for a streaming chat completion given the messages
+  // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
     model: 'gpt-3.5-turbo',
     stream: true,
