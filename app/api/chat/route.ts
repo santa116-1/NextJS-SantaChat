@@ -135,6 +135,5 @@ export async function POST(req: Request) {
     }
   }
 
-  // If no response is received after maxRetries, return a custom message
   return "We're sorry, but please try again.";
 }
