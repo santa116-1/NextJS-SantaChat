@@ -98,15 +98,43 @@ export async function POST(req: Request) {
     Please show at least one emoji that matches the content of your reply.
   `;
 
-  // Ask OpenAI for a streaming chat completion given the prompt
-  const response = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
-    stream: true,
-    messages: [{ role: 'system', content: contents }, ...messages],
-  });
+  // // Ask OpenAI for a streaming chat completion given the prompt
+  // const response = await openai.chat.completions.create({
+  //   model: 'gpt-3.5-turbo',
+  //   stream: true,
+  //   messages: [{ role: 'system', content: contents }, ...messages],
+  // });
 
-  // Convert the response into a friendly text-stream
-  const stream = OpenAIStream(response);
-  // Respond with the stream
-  return new StreamingTextResponse(stream);
+  // // Convert the response into a friendly text-stream
+  // const stream = OpenAIStream(response);
+  // // Respond with the stream
+  // return new StreamingTextResponse(stream);
+
+  // Set the maximum number of retries
+  const maxRetries = 5;
+  let retryCount = 0;
+
+  // Retry loop
+  while (retryCount < maxRetries) {
+    try {
+      // Ask OpenAI for a streaming chat completion given the prompt
+      const response = await openai.chat.completions.create({
+        model: 'gpt-3.5-turbo',
+        stream: true,
+        messages: [{ role: 'system', content: contents }, ...messages],
+      });
+
+      // Convert the response into a friendly text-stream
+      const stream = OpenAIStream(response);
+
+      // Respond with the stream
+      return new StreamingTextResponse(stream);
+    } catch (error) {
+      console.error(`Error in OpenAI API request (Attempt ${retryCount + 1}):`, error);
+      retryCount++;
+    }
+  }
+
+  // If no response is received after maxRetries, return a custom message
+  return "We're sorry, but please try again.";
 }
