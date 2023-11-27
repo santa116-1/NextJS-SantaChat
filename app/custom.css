@@ -21,3 +21,35 @@
     scrollbar-color: #eee transparent;
     scrollbar-width: thin;
 }
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: flex;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+
+    100% {
+        opacity: 1;
+        display: flex;
+    }
+}
+
+.video-animation {
+    animation: fadeOut 1s forwards;
+}
+
+.video-animation.fadeIn {
+    animation: fadeIn 1s forwards;
+}
