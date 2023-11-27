@@ -134,6 +134,4 @@ export async function POST(req: Request) {
       retryCount++;
     }
   }
-
-  return "We're sorry, but please try again.";
 }
