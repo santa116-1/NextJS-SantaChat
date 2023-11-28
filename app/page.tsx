@@ -37,7 +37,7 @@ export default function Chat() {
 
   return (
     <>
-      <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000] ${isVideoLoaded ? 'video-animation fadeOut' : 'video-animation fadeIn'}`}>
+      <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000] ${isVideoLoaded ? 'hidden' : 'block'}`}>
         <video autoPlay muted loop className="absolute top-0 left-0 object-fit z-[0]">
           <source src="/videos/03.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -56,7 +56,7 @@ export default function Chat() {
           </video>
         </div>
       </div>
-      <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000] ${isVideoLoaded ? 'video-animation fadeIn' : 'video-animation fadeOut'}`}>
+      <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000] ${isVideoLoaded ? 'block' : 'hidden'}`}>
         <video autoPlay muted loop className="absolute top-0 left-0 object-fit z-[0]">
           <source src="/videos/03.webm" type="video/webm" />
           Your browser does not support the video tag.
@@ -73,12 +73,12 @@ export default function Chat() {
           {!isChatStarted ? (
             <>
               <div className="absolute top-[40px] left-[40px] z-[4]">
-                <img src="/images/start.png" className='w-full rounded-[53px]' alt="bg" onClick={(e) => handleSubmit(e as any)} />
+                <img src="/images/start.png" className='w-full rounded-[53px] start-img' alt="bg" onClick={(e) => handleSubmit(e as any)} />
               </div>
-              <div className="absolute bottom-[200px] left-[300px] max-w-[200px] bg-[#ff0000a8] rounded-t-[15px] rounded-l-[15px] p-[20px] z-[5]">
-                <p className="text-white">Ho ho ho!</p>
-                <p className="text-white">Let's Chat with me in Santa GPT!</p>
-                <button className="w-full text-center bg-white mt-[15px] rounded-[5px] p-[5px]" onClick={handleChatStarted}>Click to chat</button>
+              <div className="absolute bottom-[150px] left-[300px] max-w-[280px] bg-[#ff0000a8] rounded-t-[25px] rounded-l-[25px] p-[20px] z-[5]">
+                <p className="text-white text-[20px]">Ho ho ho!</p>
+                <p className="text-white text-[20px]">Let's Chat with me in Santa GPT!</p>
+                <button className="w-full text-center bg-white mt-[15px] text-[#f00] rounded-[5px] p-[5px]" onClick={handleChatStarted}>Click to chat</button>
               </div>
             </>
           ) : (

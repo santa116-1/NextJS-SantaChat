@@ -53,3 +53,16 @@
 .video-animation.fadeIn {
     animation: fadeIn 1s forwards;
 }
+.start-img{
+    animation-name: imageAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes imageAnimation {
+    0% {
+        transform: scale(0.8,0.8);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+} 
