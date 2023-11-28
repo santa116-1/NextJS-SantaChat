@@ -53,16 +53,46 @@
 .video-animation.fadeIn {
     animation: fadeIn 1s forwards;
 }
-.start-img{
+
+.start-img {
     animation-name: imageAnimation;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+
+.animation {
+    animation: hithere 1s ease infinite;
+}
+
 @keyframes imageAnimation {
     0% {
-        transform: scale(0.8,0.8);
+        transform: scale(0.6, 0.6);
     }
+
     100% {
-        transform: scale(1,1);
+        transform: scale(1, 1);
     }
-} 
+}
+
+@keyframes hithere {
+    30% {
+        transform: scale(1.05);
+    }
+
+    40%,
+    60% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

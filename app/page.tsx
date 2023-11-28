@@ -73,12 +73,23 @@ export default function Chat() {
           {!isChatStarted ? (
             <>
               <div className="absolute top-[40px] left-[40px] z-[4]">
-                <img src="/images/start.png" className='w-full rounded-[53px] start-img' alt="bg" onClick={(e) => handleSubmit(e as any)} />
+                <img src="/images/bg.png" className='w-[1120px] h-[595px] object-cover object-left-top rounded-[53px]' alt="bg" />
+              </div>
+              <div className="absolute top-[80px] left-[90px] z-[5]">
+                <img src="/images/small-letter.png" className='w-[160px] h-auto object-cover object-left-top' alt="bg" />
+              </div>
+              <div className="absolute top-[200px] left-[90px] z-[5]">
+                <img src="/images/santagpt.png" className='w-[400px] h-auto object-cover object-left-top' alt="bg" />
+              </div>
+              <div className="absolute top-[100px] right-[150px] z-[5]">
+                <img src="/images/character.png" className='w-[350px] h-auto object-cover object-left-top rounded-[53px] start-img' alt="bg" />
               </div>
               <div className="absolute bottom-[150px] left-[300px] max-w-[280px] bg-[#ff0000a8] rounded-t-[25px] rounded-l-[25px] p-[20px] z-[5]">
                 <p className="text-white text-[20px]">Ho ho ho!</p>
                 <p className="text-white text-[20px]">Let's Chat with me in Santa GPT!</p>
-                <button className="w-full text-center bg-white mt-[15px] text-[#f00] rounded-[5px] p-[5px]" onClick={handleChatStarted}>Click to chat</button>
+                <div className="w-full text-center bg-white mt-[15px] text-[#f00] rounded-[5px] p-[8px] cursor-pointer animation" onClick={handleChatStarted}>
+                  <img src="/images/button_text.png" className="w-[140px] mx-auto" />
+                </div>
               </div>
             </>
           ) : (
