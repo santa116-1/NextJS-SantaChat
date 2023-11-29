@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Typewriter, { Options } from 'typewriter-effect';
 import { useChat } from 'ai/react';
 import Image from 'next/image';
-import { url } from "inspector";
 
 export default function Chat() {
 
