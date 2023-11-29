@@ -93,7 +93,7 @@ export default function Chat() {
             </>
           ) : (
             <>
-              <div className="absolute w-[360px] h-[600px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] px-[5px]" ref={chatHistoryRef}>
+              <div className="absolute w-[360px] h-[600px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] px-[5px] z-[10]" ref={chatHistoryRef}>
                 <div className="whitespace-pre-wrap max-w-[250px] p-3 rounded-t-[20px] ms-auto me-0 bg-[#979ea7] rounded-l-[20px] text-white">
                   {isTyping ? (
                     <Typewriter
