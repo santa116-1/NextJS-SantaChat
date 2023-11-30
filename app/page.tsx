@@ -25,13 +25,23 @@ export default function Chat() {
     setIsVideoLoaded(true);
   };
 
+  const backgroundImageUrl = '/images/bg.png';
+
+  const bgStyle = {
+    backgroundImage: `url(${backgroundImageUrl})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    height: '675px',
+    width: '1200px'
+  };
+
   return (
     <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000]`}>
       <video autoPlay muted loop className="absolute top-0 left-0 w-full h-[100vh] object-cover object-top z-[0]">
         <source src="/videos/video-bg.mp4" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div className="w-[1200px] h-[675px] bg-gradient-to-bl from-[#edb4a6] to-[#cee6fe] rounded-[50px] opacity-[95%] relative p-[40px]">
+      <div className="w-[1200px] h-[675px] rounded-[50px] opacity-[95%] relative p-[40px]" style={bgStyle}>
         {!isVideoLoaded ? (
           <video
             autoPlay
@@ -98,7 +108,7 @@ export default function Chat() {
             <div className="w-full">
               <form className="w-full" onSubmit={handleSubmit}>
                 <input
-                  className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#eee] focus:bg-[#fff] start-img"
+                  className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] start-img"
                   value={input}
                   placeholder="What will I get for Chrismas?"
                   onChange={handleInputChange}
