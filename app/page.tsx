@@ -55,13 +55,13 @@ export default function Chat() {
               Your browser does not support the video tag.
             </video>
             <div className="absolute top-[40px] left-[40px] z-[5]">
-              <img src="/images/small-letter1.png" className="w-[160px] h-auto object-cover object-left-top" alt="bg" />
+              <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
             <div className="absolute top-[40px] left-[50%] z-[5] translate-x-[-50%]">
-              <img src="/images/small-letter2.png" className="w-[160px] h-auto object-cover object-left-top" alt="bg" />
+              <img src="/images/small-letter2.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
             <div className="absolute top-[40px] right-[40px] z-[5]">
-              <img src="/images/small-letter3.png" className="w-[160px] h-auto object-cover object-left-top" alt="bg" />
+              <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
             <div className="absolute w-[360px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] px-[5px] z-[10]" ref={chatHistoryRef}>
               <div className="whitespace-pre-wrap max-w-[250px] p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white">
