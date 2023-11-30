@@ -41,7 +41,7 @@ export default function Chat() {
         <source src="/videos/video-bg.mp4" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div className="w-[1200px] h-[675px] rounded-[50px] opacity-[95%] relative p-[40px]" style={bgStyle}>
+      <div className="w-[1200px] h-[675px] rounded-[50px] relative p-[40px]" style={bgStyle}>
         {!isVideoLoaded ? (
           <video
             autoPlay
