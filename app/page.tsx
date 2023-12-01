@@ -63,8 +63,8 @@ export default function Chat() {
             <div className="absolute top-[40px] right-[70px] z-[5]">
               <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <div className="absolute w-[1100px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] pl-[5px] pr-[745px] z-[10]" ref={chatHistoryRef}>
-              <div className="whitespace-pre-wrap max-w-[250px] p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white">
+            <div className="absolute w-[1100px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] pl-[5px] pr-[545px] z-[10]" ref={chatHistoryRef}>
+              <div className="whitespace-pre-wrap max-w-[300px] !w-fit p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white">
                 {isTyping ? (
                   <Typewriter
                     onInit={(typewriter) => {
