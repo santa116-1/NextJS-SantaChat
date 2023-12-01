@@ -46,7 +46,7 @@ export default function Chat() {
           <video
             autoPlay
             muted
-            className={`absolute top-0 left-0 object-fit z-[3]`}
+            className={`absolute top-[0] left-[0] object-fit z-[3] scale-x-[1.07] scale-y-[1.135]`}
             onEnded={handleVideoPlayEnded}
             width={1200}
             height={675}
@@ -60,14 +60,14 @@ export default function Chat() {
               autoPlay
               muted
               loop
-              className={`absolute top-0 left-0 object-fit z-[3]`} width={1200} height={675}>
+              className={`absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135]`} width={1200} height={675}>
               <source src="/videos/02.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
-            <div className="absolute top-[40px] left-[55px] z-[5]">
+            <div className="absolute top-[40px] left-[70px] z-[5]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <div className="absolute top-[40px] right-[55px] z-[5]">
+            <div className="absolute top-[40px] right-[70px] z-[5]">
               <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
             <div className="absolute w-[1100px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] pl-[5px] pr-[745px] z-[10]" ref={chatHistoryRef}>
