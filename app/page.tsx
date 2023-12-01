@@ -56,7 +56,7 @@ export default function Chat() {
           </video>
         ) : (
           <>
-            <video autoPlay muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[100] scale-x-[1.07] scale-y-[1.135]" width={1200} height={675} />
+            <video autoPlay muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135]" width={1200} height={675} />
             <div className="absolute top-[40px] left-[70px] z-[5]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
@@ -89,7 +89,7 @@ export default function Chat() {
               </div>
               {messages.length > 0
                 ? messages.map(m => (
-                  <div key={m.id} className={`whitespace-pre-wrap max-w-[280px] p-2 rounded-t-[20px] text-white ${m.role === 'user' ? 'ms-0 me-auto bg-[#94c8f3] rounded-r-[20px]' : 'ms-auto me-0 bg-[#f45751] rounded-l-[20px]'}`}>
+                  <div key={m.id} className={`whitespace-pre-wrap max-w-[280px] p-2 rounded-t-[20px] text-white ${m.role === 'user' ? 'ms-0 me-auto bg-[#7c8c9b] rounded-r-[20px]' : 'ms-auto me-0 bg-[#f45751] rounded-l-[20px]'}`}>
                     {m.content}
                   </div>
                 ))
