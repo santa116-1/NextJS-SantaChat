@@ -89,7 +89,7 @@ export default function Chat() {
               </div>
               {messages.length > 0
                 ? messages.map(m => (
-                  <div key={m.id} className={`whitespace-pre-wrap max-w-[280px] p-2 rounded-t-[20px] text-white ${m.role === 'user' ? 'ms-0 me-auto bg-[#7c8c9b] rounded-r-[20px]' : 'ms-auto me-0 bg-[#f45751] rounded-l-[20px]'}`}>
+                  <div key={m.id} className={`whitespace-pre-wrap max-w-[280px] p-2 rounded-t-[20px] text-white break-all ${m.role === 'user' ? 'ms-0 me-auto bg-[#7c8c9b] rounded-r-[20px]' : 'ms-auto me-0 bg-[#f45751] rounded-l-[20px]'}`}>
                     {m.content}
                   </div>
                 ))
