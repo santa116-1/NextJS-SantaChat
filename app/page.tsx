@@ -64,10 +64,10 @@ export default function Chat() {
               <source src="/videos/02.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
-            <div className="absolute top-[40px] left-[40px] z-[5]">
+            <div className="absolute top-[40px] left-[55px] z-[5]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <div className="absolute top-[40px] right-[40px] z-[5]">
+            <div className="absolute top-[40px] right-[55px] z-[5]">
               <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
             <div className="absolute w-[1100px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] pl-[5px] pr-[745px] z-[10]" ref={chatHistoryRef}>
