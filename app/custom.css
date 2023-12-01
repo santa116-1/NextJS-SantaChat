@@ -5,20 +5,20 @@
 
 ::-webkit-scrollbar-thumb {
     border-radius: 2px;
-    background: #eee;
+    background: #555;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #fff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #fff;
 }
 
 /* For Firefox */
 * {
-    scrollbar-color: #eee transparent;
+    scrollbar-color: #555 transparent;
     scrollbar-width: thin;
 }
 
