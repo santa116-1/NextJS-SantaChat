@@ -19,7 +19,7 @@ export default function Chat() {
       const element = chatHistoryRef.current;
       element.scrollTop = element.scrollHeight;
     }
-  });
+  }, [chatHistoryRef]);
 
   const handleVideoPlayEnded = () => {
     setIsVideoLoaded(true);
