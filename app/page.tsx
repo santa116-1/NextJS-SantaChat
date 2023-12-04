@@ -15,9 +15,11 @@ export default function Chat() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
+    console.log(chatHistoryRef.current);
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
       element.scrollTop = element.scrollHeight;
+      console.log("--------------------------------------------------------------");
     }
   }, [chatHistoryRef]);
 
