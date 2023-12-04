@@ -15,7 +15,6 @@ export default function Chat() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
-    console.log("chatHistoryRef.current", chatHistoryRef);
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
       element.scrollTo({top:element.scrollHeight, behavior:'smooth'})
