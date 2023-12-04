@@ -18,13 +18,9 @@ export default function Chat() {
     console.log("chatHistoryRef.current", chatHistoryRef);
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
-      // element.scrollTop = element.scrollHeight;
       element.scrollTo({top:element.scrollHeight, behavior:'smooth'})
-      console.log("--------------------------------------------------------------" ,element.scrollTop);
     }
   }, [chatHistoryRef.current?.scrollHeight]);
-
-  console.log('------------the reference data------------------', chatHistoryRef.current)
 
   const handleVideoPlayEnded = () => {
     setIsVideoLoaded(true);
