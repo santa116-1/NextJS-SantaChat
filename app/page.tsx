@@ -18,8 +18,9 @@ export default function Chat() {
     console.log("chatHistoryRef.current", chatHistoryRef);
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
-      element.scrollTop = element.scrollHeight;
-      console.log("--------------------------------------------------------------");
+      // element.scrollTop = element.scrollHeight;
+      element.scrollTo({top:element.scrollHeight, behavior:'smooth'})
+      console.log("--------------------------------------------------------------" ,element.scrollTop);
     }
   }, [chatHistoryRef.current?.scrollHeight]);
 
