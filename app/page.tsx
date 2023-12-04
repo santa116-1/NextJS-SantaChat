@@ -15,13 +15,15 @@ export default function Chat() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
-    console.log(chatHistoryRef.current);
+    console.log("chatHistoryRef.current", chatHistoryRef);
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
       element.scrollTop = element.scrollHeight;
       console.log("--------------------------------------------------------------");
     }
   }, [chatHistoryRef]);
+
+  console.log('------------the reference data------------------', chatHistoryRef.current)
 
   const handleVideoPlayEnded = () => {
     setIsVideoLoaded(true);
@@ -102,7 +104,7 @@ export default function Chat() {
                 <input
                   className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] start-img"
                   value={input}
-                  placeholder="What will I get for Chrismas?"
+                  placeholder="What will I get for Christmas?"
                   onChange={handleInputChange}
                 />
                 <Image src="/images/right-arrow.png" className='absolute bottom-[30px] right-[50px] cursor-pointer z-[11]' width={30} height={30} quality={100} alt="submit" onClick={(e) => handleSubmit(e as any)} />
