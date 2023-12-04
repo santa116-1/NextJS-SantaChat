@@ -21,7 +21,7 @@ export default function Chat() {
       element.scrollTop = element.scrollHeight;
       console.log("--------------------------------------------------------------");
     }
-  }, [chatHistoryRef.current]);
+  }, [chatHistoryRef.current?.scrollHeight]);
 
   console.log('------------the reference data------------------', chatHistoryRef.current)
 
