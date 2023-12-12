@@ -38,7 +38,7 @@ export default function Chat() {
   return (
     <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000]`}>
       <video
-        controls
+        autoPlay
         muted
         loop
         src="/videos/video-bg.mp4"
@@ -47,7 +47,7 @@ export default function Chat() {
       <div className="w-[1200px] h-[675px] md:rounded-[50px] relative min-[1201px]:p-[40px] max-[1200px]:!h-[100vh] max-[1200px]:!bg-center" style={bgStyle}>
         {!isVideoLoaded ? (
           <video
-            controls
+            autoPlay
             muted
             className="absolute top-0 left-0 object-fit z-[3] min-[1201px]:scale-x-[1.07] min-[1201px]:scale-y-[1.135] max-w-[1200px] w-full h-[100vh] min-[1201px]:h-[675px]"
             onEnded={handleVideoPlayEnded}
@@ -56,7 +56,7 @@ export default function Chat() {
         ) : (
           <>
             <video
-              controls
+              autoPlay
               muted
               loop
               src="/videos/02.webm"
