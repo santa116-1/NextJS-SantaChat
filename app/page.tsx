@@ -37,7 +37,7 @@ export default function Chat() {
 
   return (
     <div className={`w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000]`}>
-      <video autoPlay muted loop className="absolute top-0 left-0 w-full h-[100vh] object-cover object-top z-[0]">
+      <video autoPlay muted loop playsInline className="absolute top-0 left-0 w-full h-[100vh] object-cover object-top z-[0]">
         <source src="/videos/video-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -46,6 +46,7 @@ export default function Chat() {
           <video
             autoPlay
             muted
+            playsInline
             className="absolute top-0 left-0 object-fit z-[3] min-[1201px]:scale-x-[1.07] min-[1201px]:scale-y-[1.135] max-w-[1200px] w-full h-[100vh] min-[1201px]:h-[675px]"
             onEnded={handleVideoPlayEnded}
           >
@@ -54,7 +55,7 @@ export default function Chat() {
           </video>
         ) : (
           <>
-            <video autoPlay muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[1200px]:left-[70px] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%]" />
+            <video autoPlay playsInline muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[1200px]:left-[70px] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%]" />
             <div className="absolute top-[40px] left-[70px] max-[1200px]:top-[20px] max-[1200px]:left-[50px] z-[100]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
