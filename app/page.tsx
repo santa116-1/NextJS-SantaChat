@@ -41,30 +41,28 @@ export default function Chat() {
         <source src="/videos/video-bg.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="w-[1200px] h-[675px] rounded-[50px] relative p-[40px]" style={bgStyle}>
+      <div className="w-[1200px] h-[675px] md:rounded-[50px] relative min-[1201px]:p-[40px] max-[1200px]:!h-[100vh] max-[1200px]:!bg-center" style={bgStyle}>
         {!isVideoLoaded ? (
           <video
             autoPlay
             muted
-            className={`absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135]`}
+            className="absolute top-0 left-0 object-fit z-[3] min-[1201px]:scale-x-[1.07] min-[1201px]:scale-y-[1.135] max-w-[1200px] w-full h-[100vh] min-[1201px]:h-[675px]"
             onEnded={handleVideoPlayEnded}
-            width={1200}
-            height={675}
           >
             <source src="/videos/01.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         ) : (
           <>
-            <video autoPlay muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135]" width={1200} height={675} />
-            <div className="absolute top-[40px] left-[70px] z-[5]">
+            <video autoPlay muted loop src="/videos/02.webm" className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%]" />
+            <div className="absolute top-[40px] left-[70px] max-[1200px]:top-[20px] max-[1200px]:left-[50px] z-[5]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <div className="absolute top-[40px] right-[70px] z-[5]">
+            <div className="absolute top-[40px] right-[70px] max-[1200px]:top-[20px] max-[1200px]:right-[50px] z-[5]">
               <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <div className="absolute w-[1100px] h-[470px] !overflow-y-auto left-[50px] top-[100px] flex flex-col gap-[10px] pl-[5px] pr-[545px] z-[10]" ref={chatHistoryRef}>
-              <div className="whitespace-pre-wrap max-w-[300px] !w-fit p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white">
+            <div className="absolute max-w-[1100px] w-full h-[470px] !overflow-y-auto min-[1201px]:left-[50px] min-[1201px]:top-[100px] flex flex-col gap-[10px] pl-[5px] max-[1200px]:pt-[50px] min-[1201px]:pr-[545px] pr-[50%] z-[10] max-[450px]:p-0 max-[450px]:px-[10px] max-[450px]:top-[280px]" ref={chatHistoryRef}>
+              <div className="whitespace-pre-wrap max-w-[300px] !w-fit p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white max-[1200px]:text-[14px]">
                 {isTyping ? (
                   <Typewriter
                     onInit={(typewriter) => {
@@ -98,12 +96,12 @@ export default function Chat() {
             <div className="w-full">
               <form className="w-full" onSubmit={handleSubmit}>
                 <input
-                  className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] start-img"
+                  className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] max-[1200px]:p-2 max-[1200px]:text-[14px] max-[1200px]:left-[40px] start-img"
                   value={input}
                   placeholder="What will I get for Christmas?"
                   onChange={handleInputChange}
                 />
-                <Image src="/images/right-arrow.png" className='absolute bottom-[30px] right-[50px] cursor-pointer z-[11]' width={30} height={30} quality={100} alt="submit" onClick={(e) => handleSubmit(e as any)} />
+                <Image src="/images/right-arrow.png" className='absolute bottom-[30px] right-[50px] cursor-pointer z-[11] max-[1200px]:bottom-[25px]' width={30} height={30} quality={100} alt="submit" onClick={(e) => handleSubmit(e as any)} />
               </form>
             </div>
           </>
