@@ -51,7 +51,7 @@ export default function Chat() {
             muted
             className="absolute top-0 left-0 object-fit z-[3] min-[1201px]:scale-x-[1.07] min-[1201px]:scale-y-[1.135] max-w-[1200px] w-full h-[100vh] min-[1201px]:h-[675px]"
             onEnded={handleVideoPlayEnded}
-            src="/videos/01.mp4"
+            src="/videos/video-bg.mp4"
           />
         ) : (
           <>
@@ -59,7 +59,7 @@ export default function Chat() {
               autoPlay
               muted
               loop
-              src="/videos/02.mp4"
+              src="/videos/video-bg.mp4"
               className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[1200px]:left-[70px] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%]"
             />
             <div className="absolute top-[40px] left-[70px] max-[1200px]:top-[20px] max-[1200px]:left-[50px] z-[100]">
