@@ -47,7 +47,7 @@ export default function Chat() {
         className="absolute top-0 left-0 w-full h-[100vh] object-cover object-top z-[0] max-[1200px]:hidden"
       />
       <div className="w-[1200px] h-[675px] md:rounded-[50px] relative min-[1201px]:p-[40px] max-[1200px]:!h-[100vh] max-[1200px]:!bg-center" style={bgStyle}>
-        {!isVideoLoaded && screenWidth > 1200 ? (
+        {!isVideoLoaded ? (
           <video
             autoPlay
             muted
