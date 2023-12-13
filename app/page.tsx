@@ -62,7 +62,7 @@ export default function Chat() {
               muted
               loop
               src="/videos/02.webm"
-              className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[1200px]:left-[70px] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%]"
+              className="absolute top-0 left-0 object-fit z-[3] scale-x-[1.07] scale-y-[1.135] max-w-[1200px] w-full h-[675px] max-[1200px]:h-[100vh] max-[1200px]:left-[70px] max-[450px]:object-top max-[450px]:scale-[1.5] max-[450px]:top-[25%] max-[450px]:left-[-25%] max-[1200px]:hidden"
             />
             <div className="absolute top-[40px] left-[70px] max-[1200px]:top-[20px] max-[1200px]:left-[50px] z-[100]">
               <img src="/images/small-letter1.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
