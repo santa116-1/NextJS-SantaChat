@@ -14,8 +14,6 @@ export default function Chat() {
   const [isTyping, setIsTyping] = useState(true);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-  const screenWidth = window.innerWidth;
-
   useEffect(() => {
     if (chatHistoryRef.current) {
       const element = chatHistoryRef.current;
@@ -37,6 +35,8 @@ export default function Chat() {
     width: '1200px'
   };
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 1200;
+
   return (
     <div className="w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000]">
       <video
@@ -47,7 +47,7 @@ export default function Chat() {
         className="absolute top-0 left-0 w-full h-[100vh] object-cover object-top z-[0] max-[1200px]:hidden"
       />
       <div className="w-[1200px] h-[675px] md:rounded-[50px] relative min-[1201px]:p-[40px] max-[1200px]:!h-[100vh] max-[1200px]:!bg-center" style={bgStyle}>
-        {!isVideoLoaded ? (
+        {!isVideoLoaded && !isMobile ? (
           <video
             autoPlay
             muted
