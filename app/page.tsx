@@ -38,7 +38,7 @@ export default function Chat() {
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 1200;
 
   return (
-    <div className="w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000]">
+    <div className="w-full h-[100vh] bg-cover bg-top flex justify-center items-center bg-[#000] overflow-x-hidden">
       <video
         autoPlay
         muted
