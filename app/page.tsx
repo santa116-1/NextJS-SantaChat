@@ -70,7 +70,7 @@ export default function Chat() {
             <div className="absolute top-[40px] right-[70px] max-[1200px]:top-[20px] max-[1200px]:right-[50px] z-[100]">
               <img src="/images/small-letter3.png" className="object-cover object-left-top w-auto h-[9px]" alt="bg" />
             </div>
-            <img src="/images/character.png" className="mx-auto w-[20%] mt-[40px] hidden max-[450px]:block" alt="" />
+            <img src="/images/character.png" className="mx-auto absolute left-[50%] translate-x-[-50%] w-[20%] mt-[40px] hidden max-[450px]:block" alt="" />
             <div className="absolute max-w-[1100px] w-full h-[470px] !overflow-y-auto min-[1201px]:left-[50px] min-[1201px]:top-[100px] flex flex-col gap-[10px] pl-[5px] max-[1200px]:pt-[50px] min-[1201px]:pr-[545px] pr-[47%] z-[10] max-[450px]:p-0 max-[450px]:px-[40px] max-[450px]:top-[180px] max-[1200px]:h-[250px] max-[450px]:h-[330px] max-[1200px]:pl-[40px]" ref={chatHistoryRef}>
               <div className="whitespace-pre-wrap max-w-[300px] !w-fit p-3 rounded-t-[20px] ms-auto me-0 bg-[#f45751] rounded-l-[20px] text-white max-[1200px]:text-[14px]">
                 {isTyping ? (
@@ -106,7 +106,7 @@ export default function Chat() {
             <div className="w-full">
               <form className="w-full" onSubmit={handleSubmit}>
                 <input
-                  className="absolute bottom-[20px] max-[450px]:bottom-[100px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] max-[1200px]:p-2 max-[1200px]:text-[14px] max-[1200px]:left-[40px] start-img"
+                  className="absolute bottom-[20px] max-[450px]:bottom-[100px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] max-[1200px]:p-2 max-[1200px]:text-[14px] max-[1200px]:left-[40px] max-[450px]:pr-[45px] start-img"
                   value={input}
                   placeholder="What will I get for Christmas?"
                   onChange={handleInputChange}
