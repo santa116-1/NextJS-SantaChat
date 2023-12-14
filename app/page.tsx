@@ -110,6 +110,7 @@ export default function Chat() {
                   value={input}
                   placeholder="What will I get for Christmas?"
                   onChange={handleInputChange}
+                  autoComplete="no-safari-autofill"
                 />
                 <Image src="/images/right-arrow.png" className='absolute bottom-[30px] right-[50px] cursor-pointer z-[11] max-[1200px]:bottom-[100px]' width={30} height={30} quality={100} alt="submit" onClick={(e) => handleSubmit(e as any)} />
               </form>
