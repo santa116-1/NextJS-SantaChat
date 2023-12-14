@@ -105,7 +105,7 @@ export default function Chat() {
             <div className="w-full">
               <form className="w-full" onSubmit={handleSubmit}>
                 <input
-                  className="absolute bottom-[20px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] max-[1200px]:p-2 max-[1200px]:text-[14px] max-[1200px]:left-[40px] start-img"
+                  className="absolute bottom-[20px] max-[450px]:bottom-[50px] z-[10] w-[calc(100%_-_80px)] rounded-[25px] p-3 outline-none bg-[#fff] max-[1200px]:p-2 max-[1200px]:text-[14px] max-[1200px]:left-[40px] start-img"
                   value={input}
                   placeholder="What will I get for Christmas?"
                   onChange={handleInputChange}
