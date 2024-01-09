@@ -1,11 +1,12 @@
-import React from 'react';
-
 import './globals.css';
-import './custom.css';
 import { Inter } from 'next/font/google';
-import Header from './header';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const metadata = {
+  title: '1 if by land christmas 2023_main',
+  description: '1 if by land christmas 2023_main',
+};
 
 export default function RootLayout({
   children,
@@ -14,8 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Header />
-      <body className={`${inter.className} overflow-hidden fixed w-full`}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
