@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: '1 if by land christmas 2023_main',
-  description: '1 if by land christmas 2023_main',
+  title: 'Santa Chatting Gift',
+  description: 'Santa Chatting Gift',
 };
 
 export default function RootLayout({
